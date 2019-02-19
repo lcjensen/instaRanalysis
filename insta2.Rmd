@@ -1,0 +1,51 @@
+---
+title: "instaRanalysis"
+author: "Lars Christian Jensen"
+date: "17/1/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(jsonlite)
+library(stringr)
+library(tidyr)
+library(dplyr)
+library(openxlsx)
+library(plyr)
+library(repurrrsive)
+library(purrr)
+
+input <- "file" #json filename without extension
+
+df <- fromJSON(paste0(input,".json"), flatten=TRUE) #vifa with name of JSON file
+
+df <- df[,-c(1:2,4:7,10:15,17:18,22)] # remove cols not in use
+
+df <- rename(df, c("shortcode"="url", "edge_media_preview_like.count"="likes", "edge_media_to_comment.count" = "numComments", "comments.data" = "comments", "edge_media_to_caption.edges" = "caption", "display_url"="file")) #rename cols
+
+df$url <- paste0("=HYPERLINK(\"https://www.instagram.com/p/",df$url,"\")") #convert the shortcode to link
+
+df$comments <- map(df$comments, "text")
+df$caption <- map(df$caption, "node.text")
+
+df$file <-  sub("\\..*", "", basename(df$file)) #extract filename
+df$file <- paste0("=HYPERLINK(\"https://syddanskuni-my.sharepoint.com/:i:/r/personal/larscj_sdu_dk/Documents/IDK%20Tech/Instagram/InstaScript/images/casperandthebeast/",df$file,".jpg?csf=1&e=MJg8Qh\")")# add path and extension
+
+#vifaFinal <- vifa %>% unnest(edge_media_to_comment.data, .preserve = tags)
+
+```
+
+
+#Capture screenshots
+```{r}
+
+library(webshot)
+
+df$scnum <- ave(df$url, FUN = seq_along)
+
+webshot(c(df$url),delay = 3, file="InstaShot.png") # only once
+
+write.xlsx(df, file = paste0(input,".xlsx"))
+
+```
