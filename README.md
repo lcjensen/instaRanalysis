@@ -53,7 +53,7 @@ Guide and requirements for analysing posts on Instragram
     e.g.:<br/>
     `install.packages("jsonlite")`
   
-    1. Install PhantomJS for R:
+    1. Install PhantomJS for R:<br/>
     `webshot::install_phantomjs()`
 
 ## Run Instagram scraper:
