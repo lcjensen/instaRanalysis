@@ -60,7 +60,7 @@ Guide and requirements for analysing posts on Instragram
 ## Run Instagram scraper:
 
 To scrape a user's account:<br/>
-`Instagram-scraper username -u yourusername -p yourpassword –-media-metadata –-comments –d path`
+`instagram-scraper username -u yourusername -p yourpassword –-media-metadata –-comments –d path`
 
 To scrape a hashtag:<br/>
 `instagram-scraper hashtag --tag`
