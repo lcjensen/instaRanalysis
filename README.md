@@ -65,7 +65,17 @@ To scrape a user's account:<br/>
 To scrape a hashtag:<br/>
 `instagram-scraper hashtag --tag`
 
+The program will produce images for each instagram post and a json file with all metadata (tag, post, likes, comments, etc.).
+
 Check full documentation [here](https://github.com/rarcega/instagram-scraper)
 
 ## Data manipulation in R
-1. Open RStudio
+1. Download this repos and save to a location where the scraper downloaded images and json file
+2. Open RStudio
+3. Create new project and choose the same save location
+4. Change the variable `input` to json filename (without the .json extension)
+    1. E.g. `input <- "somejsonfile"
+5. Change the variable `fileLoc` to the the full path of where the images from the scrape are saved:
+    1. E.g. `fileLoc <- "C:\myfiles\"` 
+    2. Works also with online drives such as Microsoft Onedrive or Sharepoint:
+        - E.g. `fileLoc <- https://corpname.sharepoint.com/Sites/sitename/Shared%20Documents/images/`
