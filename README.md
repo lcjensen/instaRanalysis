@@ -70,6 +70,8 @@ The program will produce images for each instagram post and a json file with all
 Check full documentation [here](https://github.com/rarcega/instagram-scraper)
 
 ## Data manipulation in R
+This operation outputs a readable Microsoft Excel file.
+
 1. Download this repos and save to a location where the scraper downloaded images and json file
 2. Open RStudio
 3. Create new project and choose the same save location
@@ -79,3 +81,8 @@ Check full documentation [here](https://github.com/rarcega/instagram-scraper)
     1. E.g. `fileLoc <- "C:\myfiles\"` 
     2. Works also with online drives such as Microsoft Onedrive or Sharepoint:
         - E.g. `fileLoc <- https://corpname.sharepoint.com/Sites/sitename/Shared%20Documents/images/`
+6. Run both "chunks" (wait for one to finish before you start the second)
+    1. the command: <br/>
+    `webshot(c(df$url),delay = 3, file="InstaShot.png")` <br/>
+    downloads screenshots of instagram post. This process might take a very long time for especially big datasets. This command may also exit with an error saying it cannot open a specific link. Usually this can be resolved by running this line again.
+    
