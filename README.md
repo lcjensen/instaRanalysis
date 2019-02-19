@@ -23,11 +23,12 @@ Guide and requirements for analysing posts on Instragram
 2. Install Homebrew <br/>
     1. Paste following code into the terminal window:<br/>
     `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+    
     2. Add Homebrew to your path. Paste following code into the terminal windows: <br/>
     `export PATH="/usr/local/bin:/usr/local/sbin:$PATH"`
   
 3. Install Python (2.7) via terminal:<br/>
-´brew install python@2`
+`brew install python@2`
     1. Add Python to your path:<br/>
     `export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"`
 
@@ -58,10 +59,13 @@ Guide and requirements for analysing posts on Instragram
 
 ## Run Instagram scraper:
 
-*To scrape a user's account:*<br/>
+To scrape a user's account:<br/>
 `Instagram-scraper username -u yourusername -p yourpassword –-media-metadata –-comments –d path`
 
-*To scrape a hashtag:*<br/>
+To scrape a hashtag:<br/>
 `instagram-scraper hashtag --tag`
 
 Check full documentation [here](https://github.com/rarcega/instagram-scraper)
+
+## Data manipulation in R
+1. Open RStudio
