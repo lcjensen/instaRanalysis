@@ -76,7 +76,7 @@ This operation outputs a readable Microsoft Excel file.
 2. Open RStudio
 3. Create new project and choose the same save location
 4. Change the variable `input` to json filename (without the .json extension)
-    1. E.g. `input <- "somejsonfile"
+    1. E.g. `input <- "somejsonfile"`
 5. Change the variable `fileLoc` to the the full path of where the images from the scrape are saved:
     1. E.g. `fileLoc <- "C:\myfiles\"` 
     2. Works also with online drives such as Microsoft Onedrive or Sharepoint:
