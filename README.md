@@ -27,7 +27,7 @@ Guide and requirements for analysing posts on Instragram
     `export PATH="/usr/local/bin:/usr/local/sbin:$PATH"`
   
 3. Install Python (2.7) via terminal:<br/>
-´brew install python@2´
+´brew install python@2`
     1. Add Python to your path:<br/>
     `export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"`
 
@@ -51,7 +51,7 @@ Guide and requirements for analysing posts on Instragram
     - webshot
   
     e.g.:<br/>
-    ´install.packages("jsonlite")
+    `install.packages("jsonlite")`
   
     1. Install PhantomJS for R:
     `webshot::install_phantomjs()`
