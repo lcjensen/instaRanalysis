@@ -13,7 +13,7 @@ Guide and requirements for analysing posts on Instragram
 ### Install Python on Windows:
 1. [Download](https://www.python.org/downloads/release/python-2715/) <br/>
 2. Open Command Prompt (on some corporate networks you need to run the command prompt as administrator)
-3. `setx PATH "%PATH%;C:\Python34\Scripts"`
+3. `setx PATH "%PATH%;C:\Python27\Scripts"`
 
 ### Install Python on Mac:
 1. Install Xcode tools <br/>
