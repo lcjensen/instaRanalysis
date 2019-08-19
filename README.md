@@ -75,13 +75,14 @@ This operation outputs a readable Microsoft Excel file.
 1. Download this repos and save to a location where the scraper downloaded images and json file
 2. Open RStudio
 3. Create new project and choose the same save location
-4. Change the variable `input` to json filename (without the .json extension)
+5. Open file: instaRanalysis.Rmd
+6. Change the variable `input` to json filename (without the .json extension)
     1. E.g. `input <- "somejsonfile"`
-5. Change the variable `fileLoc` to the the full path of where the images from the scrape are saved:
+7. Change the variable `fileLoc` to the the full path of where the images from the scrape are saved:
     1. E.g. `fileLoc <- "C:\myfiles\"` 
     2. Works also with online drives such as Microsoft Onedrive or Sharepoint:
         - E.g. `fileLoc <- https://corpname.sharepoint.com/Sites/sitename/Shared%20Documents/images/`
-6. Run both "chunks" (wait for one to finish before you start the second)
+8. Run both "chunks" (wait for one to finish before you start the second)
     1. the command: <br/>
     `webshot(c(df$url),delay = 3, file="InstaShot.png")` <br/>
     downloads screenshots of instagram post. This process might take a very long time for especially big datasets. This command may also exit with an error saying it cannot open a specific link. Usually this can be resolved by running this line again.
